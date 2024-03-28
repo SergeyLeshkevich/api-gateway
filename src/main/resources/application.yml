@@ -1,16 +1,5 @@
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://discovery-server:8761/eureka
 spring:
   application:
     name: api-gateway
-  main:
-    web-application-type: reactive
-debug: true
-logging:
-  level:
-    org.springframework.cloud.gateway: DEBUG
-    reactor.netty.http.client: DEBUG
-server:
-  port: 8082
+  profiles:
+    active: prod

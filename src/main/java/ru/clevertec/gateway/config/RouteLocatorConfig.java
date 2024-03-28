@@ -78,7 +78,8 @@ public class RouteLocatorConfig {
     @Bean
     public RouteLocator authFilterBean(RouteLocatorBuilder builder) {
         return builder.routes()
-                .route(r -> r.path("/auth/**")
+                .route("auth-service",
+                        r -> r.path("/auth/**","/users/**")
                         .uri("lb://auth-service"))
                 .build();
     }

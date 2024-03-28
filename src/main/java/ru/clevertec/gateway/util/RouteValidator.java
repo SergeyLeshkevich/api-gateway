@@ -31,7 +31,9 @@ public class RouteValidator {
             "/api/comments/search",
             "/api/news/\\d+",
             "/api/news",
-            "/api/news/search"
+            "/api/news/search",
+            "/auth\\.",
+            "/users\\."
     );
 
     /**

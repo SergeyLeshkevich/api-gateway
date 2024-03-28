@@ -2,6 +2,7 @@ package ru.clevertec.gateway.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.web.client.RestClient;
 import org.springframework.web.client.RestTemplate;
 import ru.clevertec.exceptionhandlerstarter.handler.NewsManagementSystemExceptionHandler;
@@ -39,6 +40,7 @@ public class AppConfig {
      * @return a NewsManagementSystemExceptionHandler instance.
      */
     @Bean
+    @Profile("prod")
     public NewsManagementSystemExceptionHandler handler(){
         return new NewsManagementSystemExceptionHandler();
     }
